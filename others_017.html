@@ -1,0 +1,575 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おさわりの覚書き</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/atom-one-dark.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="target"></div>
+
+<header>
+  <div class="container">
+    <a href="index.html">
+      <h1>
+        <img src="img/logo.png" alt="ロゴのイメージ" width="150" height="36">
+      </h1>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a id="open">
+            <i class="bi bi-list"></i>
+            メニュー
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="overlay">
+  <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="html-css.html">html+css</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="photoshop.html">PhotoShop</a></li>
+      <li><a href="illustrator.html">Illustrator</a></li>
+      <li><a href="excel.html">Excel</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="mask disable"></div>
+
+<div class="article-wrap">
+
+  
+  <article class="content img-content">
+    <div class="container">
+
+      <h1>
+        GitHub Pagesでサイトを公開する方法
+      </h1>
+
+      <div class="post-date">
+        <span>
+          <i class="bi bi-clock"></i>
+          2022/08/21
+        </span>
+      </div>
+
+      <img src="img/others/others_017-hero.png" alt="記事のトップイメージ" class="article-top-img">
+
+      <section class="caption">
+        <h1><i class="bi bi-list-ul"></i>この記事の目次</h1>
+        <ul>
+          <li><a href="">GitHub Pagesとは？</a></li>
+          <li><a href="">ユーザーサイトとプロジェクトサイトの違い</a></li>
+          <li><a href="">リポジトリを作ろう</a></li>
+          <li><a href="">ユーザーサイトを公開してみよう</a></li>
+          <li><a href="">プロジェクトサイトを作成してみよう</a></li>
+          <li><a href="">サイトを更新してみよう</a></li>
+          <li><a href="">ファイルを削除してみよう</a></li>
+          <li><a href="">リポジトリを削除してみよう</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>GitHub Pagesとは？</h2>
+        <ul class="list-style">
+          <li>GitHubが提供するホスティングサービスです</li>
+          <li>無料でウェブページをインターネット上に公開することができます</li>
+          <li>FTPクライアントソフトなどが必要ありません</li>
+          <li>HTML/CSS/JavaScriptファイルのみ掲載できます</li>
+          <li>容量10GBまで、転送量100GBまでという制限がついています</li>
+          <li>サイトが反映されるまで数十分から１～２時間ほどかかることがあります</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>ユーザーサイトとプロジェクトサイトの違い</h2>
+        <h3>その１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_01.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              公開できるサイトの種類は「ユーザーサイト」と「プロジェクトサイト」の２つあります。<br>
+              ユーザーサイトは１つのアカウントに１つだけ、プロジェクトサイトはいくつも作ることができます。<br>
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>その２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_02.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              使い方としては、ユーザーサイトにプロジェクトの一覧を掲載し、個々のプロジェクトサイトのリンク集みたいな形で、ポートフォリオサイトとして利用すると良いと思います。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>リポジトリを作ろう</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_03.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              まずはアカウントを作成します。<br>
+              <a href="https://github.com/" target="_blank" class="outer-site-url"><i class="bi bi-box-arrow-up-right"></i>GitHubのサイト</a><br>
+              ページの一番右上にある「Sign up」をクリックしてアカウントを作成してください。<br>
+              アカウント作成時に「ユーザー名」を入力する部分がございます。<br>
+              アカウント作成したら「Sign in」をクリックしてログインします。<br>
+              <span class="note">※ユーザー名はURLの一部になりますので慎重に決めましょう。</span>
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_04.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「Create repository」をクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_05.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「Repository name」の項目に「<span class="under-line">username</span>.github.io」と記入します。<br>
+              「Public」が選択されていることを確認し「Create repository」をクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順４</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_06.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「code」タブをクリックして「uploading an existing file」をクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順５</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_07.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              作成したサイトのファイルをドラッグ＆ドロップして、アップロードします。<br>
+              メモ書きも残せますが、とりあえず空欄の状態で「Commit changes」をクリックします。<br>
+              <span class="note">※index.htmlが裸の状態であることが大事です。</span>
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順６</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_08.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              アップロードしたファイルがこちらに表示されます。<br>
+              これでリポジトリにアップロードがされました。<br>
+              <span class="note">※この時点ではまだインターネット上に公開されておりません。</span>
+              <br>
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>ユーザーサイトを公開してみよう</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_09.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              実はユーザーサイトの場合、ファイルがアップロードされたら自動で公開してくれる設定になっております。<br>
+              今回は確認だけしてみましょう。<br>
+              「…」をクリックして「settings」を選択します。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_10.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              下の方にスクロールして「GitHub Pages」の項目にある「Check it out here!」をクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_11.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              公開用の「URL」が表示されていますので、右クリックして「新しいタブで開く」をクリックします。<br>
+              するとちゃんと作成したサイトが公開されていることが確認できます。<br>
+              これでユーザーサイトの公開は完了です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>プロジェクトサイトを作成してみよう</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_12.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              トップページの左上の「new」をクリックしても良いのですが、今回はアドレスバーに「github.com/<span class="under-line">new</span>」と入力してみましょう。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_13.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              プロジェクトサイトの場合は自由に名前を付けることができます。<br>
+              今回は「hobby」としてみます。<br>
+              「Public」が選択されていることを確認し「Create repository」をクリックします。<br>
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_14.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ユーザーサイトを公開した時の「<span class="under-line">手順４～手順６</span>」を行います。<br>
+              プロジェクトサイトではユーザーサイトと違って自動で公開してくれないので、こちらの設定が必要になります。<br>
+              「Source」の項目の「None」をクリックして「main」を選択します。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_15.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「root」はそのままにしておきます。<br>
+              「Save」をクリックして終了です。<br>
+              これでプロジェクトサイトが公開されました！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>サイトを更新してみよう</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_16.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「code」タブをクリックして「Add file」から「Upload files」を選択します。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_07.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              前回と同じようにファイルをドラッグ＆ドロップします。<br>
+              次に「Commit changes」をクリックします。<br>
+              <span class="note">※この時、編集したファイルと編集していないファイルを混ぜてしまっても大丈夫です。</span>
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_17.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              編集したファイルには更新日が「now」と表示されます。<br>
+              これでサイトの更新は完了です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>ファイルを削除してみよう</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_18.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              今度は不要になったファイルを削除してみましょう。<br>
+              今回はimgフォルダに入っている、画像ファイルを削除していきます。<br>
+              「code」タブをクリックして「img」フォルダをダブルクリックします。<br>
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_19.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              削除する「profile.png」ファイルをダブルクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_20.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ページを広げて、右側に表示される「ゴミ箱」のアイコンをクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順４</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_21.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              メモ書きができますが、このまま「Commit changes」をクリックします。<br>
+              これで削除が完了です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>補足</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_22.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              なお、フォルダごと削除したい場合は「…」をクリックして「Delete directory」をクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>リポジトリを削除してみよう</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_23.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              最後にリポジトリを削除する方法を見ていきましょう。<br>
+              「…」をクリックして「settings」を選択します。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_24.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              一番下までスクロールします。<br>
+              「Delete this repository」をクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_017_25.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              上記に記載している「リポジトリ名」を入力します。<br>
+              今回は「osawari/hobby」と入力し「I understand the consequences, delete this repository」をクリックします。<br>
+              これでリポジトリが削除できました！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section class="back-to-category">
+        <div class="btn">
+          <a href="others.html">
+            記事一覧に戻る
+          </a>
+        </div>
+      </section>
+
+    </div><!--container-->
+  </article><!--content-->
+
+  <section class="ad-sp">
+    <div class="container">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-sp.jpg" alt="" width="300" height="250">
+      </a>
+    </div>
+  </section>
+
+  <div class="side-menu">
+
+    <aside class="category">
+      <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+      <nav>
+        <ul>
+          <li><a href="html-css.html">html+css</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="php.html">PHP</a></li>
+          <li><a href="photoshop.html">PhotoShop</a></li>
+          <li><a href="illustrator.html">Illustrator</a></li>
+          <li><a href="excel.html">Excel</a></li>
+          <li><a href="others.html">Others</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <aside class="profile">
+      <h1><i class="bi bi-emoji-smile"></i>プロフィール</h1>
+      <img src="img/profile.png" alt="" width="100" height="100">
+      <h2>おさわりくん</h2>
+      <p>
+        独学でWebデザインの勉強をしている幼稚園児。年中さんのヒヨコ組です。勉強したことや、忘れがちなことをメモしてます。花まるをもらえるようにいつも頑張ってます！
+      </p>
+    </aside>
+
+    <aside class="ad-pc">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-pc.jpg" alt="">
+      </a>
+    </aside>
+
+  </div><!--side-menu-->
+
+</div><!--article-wrap-->
+
+<footer>
+  <div class="container">
+    <small>&copy;おさわりの覚書き</small>
+  </div>
+</footer>
+
+<a href="#" id="to-top"><i class="bi bi-arrow-up-square-fill"></i></a>
+
+<script src="js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="js/main.js"></script>
+</body>
+</html>

@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おさわりの覚書き</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/atom-one-dark.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="target"></div>
+
+<header>
+  <div class="container">    
+    <a href="index.html">
+      <h1>
+        <img src="img/logo.png" alt="ロゴのイメージ" width="150" height="36">
+      </h1>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a id="open">
+            <i class="bi bi-list"></i>
+            メニュー
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="overlay">
+  <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="html-css.html">html+css</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="photoshop.html">PhotoShop</a></li>
+      <li><a href="illustrator.html">Illustrator</a></li>
+      <li><a href="excel.html">Excel</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="mask disable"></div>
+
+<div class="article-wrap">
+
+  <article class="content">
+    <div class="container">
+
+      <h1>
+        テキストに色々な下線を引く方法
+      </h1>
+
+      <div class="post-date">
+        <span>
+          <i class="bi bi-clock"></i>
+          2022/08/28
+        </span>
+      </div>
+
+      <img src="img/html-css/html-css_005-hero.png" alt="記事のトップイメージ" class="article-top-img">
+
+      <section class="caption">
+        <h1><i class="bi bi-list-ul"></i>この記事の目次</h1>
+        <ul>
+          <li><a href="">普通の下線を引いてみよう</a></li>
+          <li><a href="">点線・破線・二重線を引いてみよう</a></li>
+          <li><a href="">蛍光ペン風の下線を引いてみよう</a></li>
+          <li><a href="">ストライプ風の下線を引いてみよう</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>普通の下線を引いてみよう</h2>
+        <h3>その１ まずは普通に下線を引いてみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  おさわりは&lt;span class="under-line"&gt;年中さん&lt;/span&gt;です。
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+.under-line {
+  text-decoration: underline;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_005_01.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              <code>span</code>タグで囲まれたテキストに下線が引かれました。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>その２ 色を変えてみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  おさわりは&lt;span class="under-line"&gt;年中さん&lt;/span&gt;です。
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+.under-line {
+  text-decoration: underline;
+  color: tomato;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_005_02.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              下線だけ色を変えようと思っても、この方法では「<span class="under-line">文字色＝下線の色</span>」になってしまいます。<br>
+              また、下線の太さなども変えることができません。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>その３ border-bottomを使ってみよう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  おさわりは&lt;span class="under-line"&gt;年中さん&lt;/span&gt;です。
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+.under-line {
+  border-bottom: 3px solid tomato;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_005_03.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              これで下線のみに色を付けることができ、太さも変えられました。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>点線・破線・二重線を引いてみよう</h2>
+        <h3>その１ 下線を点線にしてみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  おさわりは&lt;span class="under-line"&gt;年中さん&lt;/span&gt;です。
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+.under-line {
+  border-bottom: 3px dotted tomato;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_005_04.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「solid」(実線)を「dotted」(点線)に変更すると点線になります。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>その２ 下線を破線にしてみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  おさわりは&lt;span class="under-line"&gt;年中さん&lt;/span&gt;です。
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+.under-line {
+  border-bottom: 3px dashed tomato;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_005_05.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「solid」(実線)を「dashed」(破線)に変更すると破線になります。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>その３ 下線を二重線にしてみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  おさわりは&lt;span class="under-line"&gt;年中さん&lt;/span&gt;です。
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+.under-line {
+  border-bottom: 3px double tomato;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_005_06.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「solid」(実線)を「double」(二重線)に変更すると二重線になります。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>蛍光ペン風の下線を引いてみよう</h2>
+        <h3>その１ 文字の下半分に蛍光ペン風の下線を引いてみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  おさわりは&lt;span class="under-line"&gt;年中さん&lt;/span&gt;です。
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+.under-line {
+  background: linear-gradient(transparent 50%, #ffb8b8 50%);
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_005_07.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              背景色の表示する幅を指定することで蛍光ペン風の下線を引くことができます。<br>
+              蛍光ペンっぽい色を指定することが大事です。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>その２ 蛍光ペンの幅を細くしてみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  おさわりは&lt;span class="under-line"&gt;年中さん&lt;/span&gt;です。
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+.under-line {
+  background: linear-gradient(transparent 70%, #ffb8b8 70%);
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_005_08.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              パーセンテージを増やすことによって、線が細くなります。<br>
+              ご自分の好みの太さに調整してみましょう。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>ストライプ風の下線を引いてみよう</h2>
+        <h3>その１ 文字の下半分に蛍光ペン風の下線を引いてみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  おさわりは&lt;span class="under-line"&gt;年中さん&lt;/span&gt;です。
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+.under-line {
+  position: relative;
+  padding: 0.2em;
+}
+.under-line::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 7px;
+  background: repeating-linear-gradient(-45deg, #ffb8b8, #ffb8b8 2px, white 2px, white 4px);
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_005_09.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              after擬似要素を使いストライプ風の下線を引くことができます。<br>
+              <code class="code-tag">height</code>を調節することで線の太さが変更できます。<br>
+              また、背景色が白でないときは<code class="code-tag">white</code>の部分の色を変更してみましょう！
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section class="back-to-category">
+        <div class="btn">
+          <a href="html-css.html">
+            記事一覧に戻る
+          </a>
+        </div>
+      </section>
+
+    </div><!--container-->
+  </article><!--content-->
+
+  <section class="ad-sp">
+    <div class="container">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-sp.jpg" alt="" width="300" height="250">
+      </a>
+    </div>
+  </section>
+
+  <div class="side-menu">
+
+    <aside class="category">
+      <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+      <nav>
+        <ul>
+          <li><a href="html-css.html">html+css</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="php.html">PHP</a></li>
+          <li><a href="photoshop.html">PhotoShop</a></li>
+          <li><a href="illustrator.html">Illustrator</a></li>
+          <li><a href="excel.html">Excel</a></li>
+          <li><a href="others.html">Others</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <aside class="profile">
+      <h1><i class="bi bi-emoji-smile"></i>プロフィール</h1>
+      <img src="img/profile.png" alt="" width="100" height="100">
+      <h2>おさわりくん</h2>
+      <p>
+        独学でWebデザインの勉強をしている幼稚園児。年中さんのヒヨコ組です。勉強したことや、忘れがちなことをメモしてます。花まるをもらえるようにいつも頑張ってます！
+      </p>
+    </aside>
+
+    <aside class="ad-pc">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-pc.jpg" alt="">
+      </a>
+    </aside>
+
+  </div><!--side-menu-->
+
+</div><!--article-wrap-->
+
+<footer>
+  <div class="container">
+    <small>&copy;おさわりの覚書き</small>
+  </div>
+</footer>
+
+<a href="#" id="to-top"><i class="bi bi-arrow-up-square-fill"></i></a>
+
+<script src="js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="js/main.js"></script>
+</body>
+</html>

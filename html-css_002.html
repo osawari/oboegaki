@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おさわりの覚書き</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/atom-one-dark.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="target"></div>
+
+<header>
+  <div class="container">    
+    <a href="index.html">
+      <h1>
+        <img src="img/logo.png" alt="ロゴのイメージ" width="150" height="36">
+      </h1>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a id="open">
+            <i class="bi bi-list"></i>
+            メニュー
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="overlay">
+  <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="html-css.html">html+css</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="photoshop.html">PhotoShop</a></li>
+      <li><a href="illustrator.html">Illustrator</a></li>
+      <li><a href="excel.html">Excel</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="mask disable"></div>
+
+<div class="article-wrap">
+
+  <article class="content">
+    <div class="container">
+
+      <h1>
+        要素の中央寄せの仕方について
+      </h1>
+
+      <div class="post-date">
+        <span>
+          <i class="bi bi-clock"></i>
+          2022/01/23
+        </span>
+      </div>
+
+      <img src="img/html-css/html-css_002-hero.png" alt="記事のトップイメージ" class="article-top-img">
+
+      <section class="caption">
+        <h1><i class="bi bi-list-ul"></i>この記事の目次</h1>
+        <ul>
+          <li><a href="">インライン要素とブロック要素についてのおさらい</a></li>
+          <li><a href="">中央寄せの基本的な考え方</a></li>
+          <li><a href="">インライン要素の中央寄せ</a></li>
+          <li><a href="">インライン要素の中央寄せ(画像)</a></li>
+          <li><a href="">ブロック要素の中央寄せ</a></li>
+          <li><a href="">縦方向の中央寄せ(インライン要素)</a></li>
+          <li><a href="">縦方向の中央寄せ(ブロック要素)</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>インライン要素とブロック要素についてのおさらい</h2>
+        <ul class="list-style">
+          <li>インライン要素とは幅と高さを持っていない要素であり、文章の一部として扱われる要素です。基本的にはブロック要素の中で使用されます。注意点としてはimgタグもインライン要素に含まれます。（例: aタグ、imgタグ、spanタグ、buttonタグ）</li>
+          <li>ブロック要素とは幅と高さを持っている要素であり、コンテンツをまとめる箱のような使い方をします。（例: pタグ、divタグ、h1～h6タグ）</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>中央寄せの基本的な考え方</h2>
+        <ul class="list-style">
+          <li>中央寄せする時は、その要素がインライン要素かブロック要素かによって変わります。</li>
+          <li>インライン要素を中央寄せする時は<code class="code-tag">text-align: center</code>を使用します。</li>
+          <li>ブロック要素を中央寄せする時は<code class="code-tag">margin: 0 auto</code>を使用します。左右のマージンをautoにすることによって中央寄せを表現できます。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>インライン要素の中央寄せ</h2>
+        <h3>その１ まずは中央寄せしたい要素に<code class="code-tag">text-align: center</code>を実装してみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  &lt;a&gt;おさわりの覚書き&lt;/a&gt;
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+a {
+  text-align: center;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_002_01.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              一見うまく行きそうなのですが、これだと中央寄せになりません。<br>
+              実は<code class="code-tag">text-align</code>プロパティとはブロックレベル要素(例：pタグ)に指定し、その要素内のインライン要素(例：aタグ)の水平方向の位置を決めることができるプロパティなのです。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>その２ 親要素となるブロック要素に<code class="code-tag">text-align: center</code>を付け替えてみましょう</h3>
+<pre><code class="html">
+&lt;p&gt;
+  &lt;a&gt;おさわりの覚書き&lt;/a&gt;
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+p {
+  text-align: center;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_002_02.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              これで中央寄せができました。<br>
+              <code class="code-tag">text-align: center</code>を使用する時は、指定する要素と位置が決まる要素が異なることに注意してください。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h2>インライン要素の中央寄せ(画像)</h2>
+        <h3>img要素の中央寄せ</h3>
+<pre><code class="html">
+&lt;p&gt;
+  &lt;a href=""&gt;&lt;img src=""&gt;&lt;/a&gt;
+&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+p {
+  text-align: center;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_002_03.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              img要素も同じように中央寄せ出来ます。<br>
+              ただしimgタグはインライン要素ですので、親要素に対し<code class="code-tag">text-align: center</code>を設置します。<br>
+              こちらも同じようにimgタグやaタグに設定した場合は中央寄せができなくなりますので、注意です。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h2>ブロック要素の中央寄せ</h2>
+        <h3>その１ まずは中央寄せしたい要素に<code class="code-tag">margin: 0 auto</code>を実装してみます</h3>
+<pre><code class="html">
+&lt;p&gt;おさわりの覚書き&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+p {
+  margin: 0 auto;
+  background: #50bd9e;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_002_04.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              実はこれだとうまく行きません。<br>
+              中央寄せする要素(例: pタグ)にwidthが指定されていない場合、width:100%となり、親要素(例: divタグ)一杯に広がってしまします。<br>
+              そのため、widthが親要素と同じ大きさとなりますので、中央寄せできなくなります。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>その２ 要素にwidthを設定してみよう</h3>
+<pre><code class="html">
+&lt;p&gt;おさわりの覚書き&lt;/p&gt;
+</code></pre>
+<pre><code class="css">
+p {
+  width: 200px;
+  margin: 0 auto;
+  background: #50bd9e;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_002_05.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              親要素がない時はbodyが親要素になります。<br>
+              また、補足になりますが、ボックス内の文字を中央寄せにしたい時は<code class="code-tag">text-align: center</code>を設定する必要があります。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h3>その３ 中央寄せができない原因</h3>
+<pre><code class="html">
+&lt;div&gt;
+  &lt;p&gt;おさわりの覚書き&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="css">
+div {
+  width: 150px;
+  border: 2px dashed #aaa;
+}
+p {
+  width: 100px;
+  margin: 0 auto;
+  background: #50bd9e;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_002_06.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              <code class="code-tag">marin: 0 auto</code>は親要素の幅を基準に中央寄せになります。<br>
+              そもそも親要素(例: divタグ)が左に寄っていたら、その分だけ左に寄ってしまいます。<br>
+              こちらを解消するためには親要素(例: divタグ)にも<code class="code-tag">marin: 0 auto</code>を適用する必要があります。
+            </p>
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h2>縦方向の中央寄せ(インライン要素)</h2>
+        <h3>インライン要素の縦方向の中央寄せ</h3>
+<pre><code class="html">
+&lt;div&gt;
+  &lt;p&gt;おさわりの覚書き&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="css">
+div {
+  height: 70px;
+  background: #50bd9e;
+}
+p {
+  line-height: 70px;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_002_07.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ボックス内の文字(インライン要素)を縦方向に中央寄せするには「<span class="under-line">行の高さ＝ボックスの高さ</span>」にしてみましょう。<br>
+              行の高さはline-heightで指定できます。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>line-heightが効かない原因</h3>
+<pre><code class="html">
+&lt;div&gt;
+  &lt;p&gt;おさわりの覚書き&lt;br&gt;年中さんです。&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="css">
+div {
+  height: 70px;
+  background: #50bd9e;
+}
+p {
+  line-height: 70px;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_002_08.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              文章が２行以上になる場合、２行目がボックスからはみ出てしまいます。<br>
+              そのため、文章が１行の時のみline-heightで縦方向に中央寄せができます。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h2>縦方向の中央寄せ(ブロック要素)</h2>
+        <h3>ブロック要素の縦方向の中央寄せ</h3>
+<pre><code class="html">
+&lt;div&gt;
+  &lt;p&gt;おさわりの覚書き&lt;br&gt;年中さんです。&lt;/p&gt;
+&lt;/div&gt;
+</code></pre>
+<pre><code class="css">
+div {
+  position: relative;
+}
+p {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: #50bd9e;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_002_09.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              <code class="code-tag">position: absolute</code>を活用してブロック要素を縦方向に中央寄せします。<br>
+              こちらを使用することで、文章が２行以上でも、ブロック要素でも中央寄せが表現できます。<br>
+              まず、親要素に<code class="code-tag">position: relative</code>を指定し、中央配置したい要素を絶対配置<code class="code-tag">positon: absolute</code>します。<br>
+              次に、中央配置したい要素に<code class="code-tag">top: 50%</code>を指定して、親要素の上から50%の位置にします。<br>
+              同じく中央配置したい要素に<code class="code-tag">transform: translateY(-50%)</code>でズレを補正します。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section class="back-to-category">
+        <div class="btn">
+          <a href="html-css.html">
+            記事一覧に戻る
+          </a>
+        </div>
+      </section>
+
+    </div><!--container-->
+  </article><!--content-->
+
+  <section class="ad-sp">
+    <div class="container">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-sp.jpg" alt="" width="300" height="250">
+      </a>
+    </div>
+  </section>
+
+  <div class="side-menu">
+
+    <aside class="category">
+      <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+      <nav>
+        <ul>
+          <li><a href="html-css.html">html+css</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="php.html">PHP</a></li>
+          <li><a href="photoshop.html">PhotoShop</a></li>
+          <li><a href="illustrator.html">Illustrator</a></li>
+          <li><a href="excel.html">Excel</a></li>
+          <li><a href="others.html">Others</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <aside class="profile">
+      <h1><i class="bi bi-emoji-smile"></i>プロフィール</h1>
+      <img src="img/profile.png" alt="" width="100" height="100">
+      <h2>おさわりくん</h2>
+      <p>
+        独学でWebデザインの勉強をしている幼稚園児。年中さんのヒヨコ組です。勉強したことや、忘れがちなことをメモしてます。花まるをもらえるようにいつも頑張ってます！
+      </p>
+    </aside>
+
+    <aside class="ad-pc">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-pc.jpg" alt="">
+      </a>
+    </aside>
+
+  </div><!--side-menu-->
+
+</div><!--article-wrap-->
+
+<footer>
+  <div class="container">
+    <small>&copy;おさわりの覚書き</small>
+  </div>
+</footer>
+
+<a href="#" id="to-top"><i class="bi bi-arrow-up-square-fill"></i></a>
+
+<script src="js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="js/main.js"></script>
+</body>
+</html>

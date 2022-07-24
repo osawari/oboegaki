@@ -1,0 +1,641 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おさわりの覚書き</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/atom-one-dark.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="target"></div>
+
+<header>
+  <div class="container">    
+    <a href="index.html">
+      <h1>
+        <img src="img/logo.png" alt="ロゴのイメージ" width="150" height="36">
+      </h1>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a id="open">
+            <i class="bi bi-list"></i>
+            メニュー
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="overlay">
+  <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="html-css.html">html+css</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="photoshop.html">PhotoShop</a></li>
+      <li><a href="illustrator.html">Illustrator</a></li>
+      <li><a href="excel.html">Excel</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="mask disable"></div>
+
+<div class="article-wrap">
+
+  <article class="content">
+    <div class="container">
+
+      <h1>
+        サイドバーを固定・スクロール追従させる方法
+      </h1>
+
+      <div class="post-date">
+        <span>
+          <i class="bi bi-clock"></i>
+          2022/01/30
+        </span>
+      </div>
+
+      <img src="img/html-css/html-css_003-hero.png" alt="記事のトップイメージ" class="article-top-img">
+
+      <section class="caption">
+        <h1><i class="bi bi-list-ul"></i>この記事の目次</h1>
+        <ul>
+          <li><a href="">ヘッダーを固定する(position: sticky)</a></li>
+          <li><a href="">ヘッダーを固定する(position: fixed)</a></li>
+          <li><a href="">グローバルナビゲーションを固定する</a></li>
+          <li><a href="">見出しを固定する</a></li>
+          <li><a href="">サイドバーを固定する</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>ヘッダーを固定する(position: sticky)</h2>
+        <h3>手順１ １カラムレイアウトを用意します</h3>
+<pre><code class="html">
+&lt;header&gt;
+  ヘッダーです。
+&lt;/header&gt;
+&lt;main&gt;
+  メインコンテンツです。
+&lt;/main&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_01.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ヘッダー、メインコンテンツ、フッターの単純な構成を用意します。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>その２ 固定したい要素に<code class="code-tag">position: sticky</code>を設定します</h3>
+<pre><code class="html">
+&lt;header&gt;
+  ヘッダーです。
+&lt;/header&gt;
+&lt;main&gt;
+  メインコンテンツです。
+&lt;/main&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+<pre><code class="css">
+header {
+  position: sticky;
+  top: 0;
+}
+</code></pre>
+        <h4>サンプル</h4>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_02.gif" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ヘッダーに<code class="code-tag">position: sticky</code>を設定し、ヘッダーを固定します。<br>
+              その際に<code class="code-tag">top: 0</code>の表記を忘れないようにしてください。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section>
+      </section>
+
+      <section>
+        <h2>ヘッダーを固定する(position: fixed)</h2>
+        <h3>手順１ 今度は<code class="code-tag">position: fixed</code>で実装してみます</h3>
+<pre><code class="html">
+&lt;header&gt;
+  ヘッダーです。
+&lt;/header&gt;
+&lt;main&gt;
+  メインコンテンツです。
+&lt;/main&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+<pre><code class="css">
+  header {
+    position: fixed;
+    height: 60px;
+  }
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_03.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              <code class="code-tag">position: fixed</code>に変更すると、この要素が浮いて表示されるようになるので、メインコンテンツと重なる部分ができてしまいます。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>手順２ メインコンテンツに<code class="code-tag">padding: top</code>を設定してみます</h3>
+<pre><code class="css">
+header {
+  position: fixed;
+  height: 60px;
+}
+main {
+  padding-top: 60px;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_02.gif" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ヘッダーの高さと同じ大きさの幅をメインコンテンツに<code class="code-tag">padding-top</code>として設定することで、表示が正しくなりました。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h2>グローバルナビゲーションを固定する</h2>
+        <h3>手順１ グローバルナビゲーションを加えた１カラムレイアウトを用意します</h3>
+<pre><code class="html">
+&lt;header&gt;
+  ヘッダーです。
+&lt;/header&gt;
+&lt;nav&gt;
+  &lt;ul&gt;
+    &lt;li&gt;メニュー&lt;/li&gt;
+    &lt;li&gt;メニュー&lt;/li&gt;
+    &lt;li&gt;メニュー&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/nav&gt;
+&lt;main&gt;
+  メインコンテンツです。
+&lt;/main&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_04.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              今度はグローバルナビゲーションだけが上部で固定するように実装してみましょう。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>手順２ グローバルナビゲーションに<code class="code-tag">position: sticky</code>を実装してみます</h3>
+<pre><code class="css">
+nav {
+  position: sticky;
+  top: 0;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_05.gif" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              グローバルナビゲーションに<code class="code-tag">position: sticky</code>を設定し、<code class="code-tag">top: 0</code>を設定します。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h2>見出しを固定する</h2>
+        <h3>手順１ 見出しを加えた構成を用意します</h3>
+<pre><code class="html">
+&lt;header&gt;
+  ヘッダーです。
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;h1&gt;見出し１&lt;/h1&gt;
+  &lt;p&gt;メインコンテンツです。&lt;/p&gt;
+  &lt;h1&gt;見出し２&lt;/h1&gt;
+  &lt;p&gt;メインコンテンツです。&lt;/p&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_06.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              今度はグローバルナビゲーションだけが上部で固定するように実装してみましょう。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>手順３ 見出しに<code class="code-tag">position: sticky</code>を設定してみます</h3>
+<pre><code class="css">
+h1 {
+  position: sticky;
+  top: 0;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_07.gif" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              h1タグに<code class="code-tag">position: sticky</code>と<code class="code-tag">top: 0</code>を設定すると、スティッキーアイテムが覆いかぶさるようにフロートしていきます。<br>
+              これで完成です！
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>手順４ ちょっとした小技<i class="bi bi-star"></i></h3>
+<pre><code class="html">
+&lt;header&gt;
+  ヘッダーです。
+&lt;/header&gt;
+&lt;main&gt;
+  &lt;div class="container"&gt;
+    &lt;h1&gt;見出し１&lt;/h1&gt;
+    &lt;p&gt;メインコンテンツです。&lt;/p&gt;
+  &lt;/div&gt;
+  &lt;div class="container"&gt;
+    &lt;h1&gt;見出し２&lt;/h1&gt;
+    &lt;p&gt;メインコンテンツです。&lt;/p&gt;
+  &lt;/div&gt;
+&lt;/main&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_08.gif" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              スティッキーアイテムを覆いかぶさないようにする小技があります。<br>
+              見出しとメインコンテンツをスティッキーコンテナないに入れ子にします。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h2>サイドバーを固定する</h2>
+        <h3>手順１ ２カラムレイアウトを用意します</h3>
+<pre><code class="html">
+&lt;div class="container"&gt;
+  &lt;main&gt;
+    メインコンテツです。
+  &lt;/main&gt;
+  &lt;aside&gt;
+    サブコンテツです。
+  &lt;/aside&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+<pre><code class="css">
+.container {
+  display: flex;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_09.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              こちらのサブコンテンツの部分を固定したいと思います。<br>
+              ちなみにフロートではなく、<code class="code-tag">display: flex</code>にする必要があります。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>手順２ サイドバーに<code class="code-tag">position: sticky</code>を設定してみます</h3>
+<pre><code class="css">
+aside {
+  position: sticky;
+  top: 0;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_10.gif" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              一見うまく行きそうですが、実はこれではサイドバーは固定されませんので、少しテクニックが必要になります。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>手順３ サイドバーを固定するための小技です<i class="bi bi-star"></i></h3>
+<pre><code class="html">
+&lt;div class="container"&gt;
+  &lt;main&gt;
+    メインコンテツです。
+  &lt;/main&gt;
+  &lt;aside&gt;
+    &lt;div class="side-item"&gt;
+      サブコンテツです。
+    &lt;/div&gt;
+  &lt;/aside&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+<pre><code class="css">
+.side-item {
+  position: sticky;
+  top: 0px;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_11.gif" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              asideタグに入れ子にするようにしてdivタグを使用してサブコンテンツを囲います。<br>
+              併せて、asideタグから<code class="code-tag">positon: sticky</code>を外し、divタグに付け替えます。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>手順４ ヘッダーを加えてみましょう</h3>
+<pre><code class="html">
+&lt;header&gt;
+  ヘッダー
+&lt;/header&gt;
+&lt;div class="container"&gt;
+  &lt;main&gt;
+    メインコンテツです。
+  &lt;/main&gt;
+  &lt;aside&gt;
+    &lt;div class="side-item"&gt;
+      サブコンテツです。
+    &lt;/div&gt;
+  &lt;/aside&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+<pre><code class="css">
+header {
+  height: 60px;
+  position: fixed;
+  opacity: 0.9;
+  z-index: 1;
+}
+.container {
+  display: flex;
+  padding-top: 60px;
+}
+.side-item {
+  position: sticky;
+  top: 60px;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_12.gif" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ヘッダーを加える時は、ヘッダーの高さ分下に続くコンテンツに<code class="code-tag">padding-top</code>を設定するのを忘れないようにしましょう。
+            </p>
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section>
+        <h3>手順５ サブコンテンツを２つに増やしてみましょう</h3>
+<pre><code class="html">
+&lt;header&gt;
+  ヘッダーです。
+&lt;/header&gt;
+&lt;div class="container"&gt;
+  &lt;main&gt;
+    メインコンテツです。
+  &lt;/main&gt;
+  &lt;aside&gt;
+    &lt;div class="side-item_01"&gt;
+      サブコンテツです。
+    &lt;/div&gt;
+    &lt;div class="side-item_02"&gt;
+      サブコンテツです。
+    &lt;/div&gt;
+  &lt;/aside&gt;
+&lt;/div&gt;
+&lt;footer&gt;
+  フッターです。
+&lt;/footer&gt;
+</code></pre>
+<pre><code class="css">
+header {
+  height: 60px;
+  position: fixed;
+  opacity: 0.9;
+  z-index: 1;
+}
+.container {
+  display: flex;
+  padding-top: 60px;
+}
+.side_item_02 {
+  position: sticky;
+  top: 60px;
+}
+</code></pre>
+        <h4>サンプル</h4>
+
+        <section class="sample">
+          <div class="pic">
+            <img src="img/html-css/html-css_003_13.gif" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ２つ目のサブコンテンツに<code class="code-tag">position: sticky</code>を設定し、追従させるということもできます。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+
+      </section>
+
+      <section class="back-to-category">
+        <div class="btn">
+          <a href="html-css.html">
+            記事一覧に戻る
+          </a>
+        </div>
+      </section>
+
+    </div><!--container-->
+  </article><!--content-->
+
+  <section class="ad-sp">
+    <div class="container">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-sp.jpg" alt="" width="300" height="250">
+      </a>
+    </div>
+  </section>
+
+  <div class="side-menu">
+
+    <aside class="category">
+      <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+      <nav>
+        <ul>
+          <li><a href="html-css.html">html+css</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="php.html">PHP</a></li>
+          <li><a href="photoshop.html">PhotoShop</a></li>
+          <li><a href="illustrator.html">Illustrator</a></li>
+          <li><a href="excel.html">Excel</a></li>
+          <li><a href="others.html">Others</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <aside class="profile">
+      <h1><i class="bi bi-emoji-smile"></i>プロフィール</h1>
+      <img src="img/profile.png" alt="" width="100" height="100">
+      <h2>おさわりくん</h2>
+      <p>
+        独学でWebデザインの勉強をしている幼稚園児。年中さんのヒヨコ組です。勉強したことや、忘れがちなことをメモしてます。花まるをもらえるようにいつも頑張ってます！
+      </p>
+    </aside>
+
+    <aside class="ad-pc">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-pc.jpg" alt="">
+      </a>
+    </aside>
+
+  </div><!--side-menu-->
+
+</div><!--article-wrap-->
+
+<footer>
+  <div class="container">
+    <small>&copy;おさわりの覚書き</small>
+  </div>
+</footer>
+
+<a href="#" id="to-top"><i class="bi bi-arrow-up-square-fill"></i></a>
+
+<script src="js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="js/main.js"></script>
+</body>
+</html>

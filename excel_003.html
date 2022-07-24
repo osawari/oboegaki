@@ -1,0 +1,430 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おさわりの覚書き</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/atom-one-dark.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="target"></div>
+
+<header>
+  <div class="container">    
+    <a href="index.html">
+      <h1>
+        <img src="img/logo.png" alt="ロゴのイメージ" width="150" height="36">
+      </h1>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a id="open">
+            <i class="bi bi-list"></i>
+            メニュー
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="overlay">
+  <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="html-css.html">html+css</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="photoshop.html">PhotoShop</a></li>
+      <li><a href="illustrator.html">Illustrator</a></li>
+      <li><a href="excel.html">Excel</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="mask disable"></div>
+
+<div class="article-wrap">
+
+  <article class="content img-content">
+    <div class="container">
+
+      <h1>
+        エクセルで「1」を「001」と表示する方法
+      </h1>
+
+      <div class="post-date">
+        <span>
+          <i class="bi bi-clock"></i>
+          2022/03/27
+        </span>
+      </div>
+
+      <img src="img/excel/excel_003-hero.png" alt="記事のトップイメージ" class="article-top-img">
+
+      <section class="caption">
+        <h1><i class="bi bi-list-ul"></i>この記事の目次</h1>
+        <ul>
+          <li><a href="">エクセルの仕様について</a></li>
+          <li><a href="">ユーザー定義を使う方法</a></li>
+          <li><a href="">REPT(リピート)関数を使う方法</a></li>
+          <li><a href="">蛇足</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>エクセルの仕様について</h2>
+        <h3>仕様１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_01.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              エクセルの仕様上「001」と入力したとしても「1」と表示されてしまします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>仕様２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_02.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ただ、桁数を揃えたい時もあると思います。<br>
+              今回はそんな時に使えるテクニックを紹介します。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>ユーザー定義を使う方法</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_03.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              まずは、設定したい範囲を選択します。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_04.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              右クリックをして、セルの書式設定をクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_05.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              分類にある「ユーザー定義」を選択し、種類の欄に「000」を入力します。<br>
+              次に「OKボタン」をクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順４</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_06.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              数字部分が３桁で表示されるようになりました。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>補足</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_07.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              細かいことですが、表示では「000」となっていますが、実際のデータは「0」となっていることが確認できると思います。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>REPT(リピート)関数を使う方法</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_08.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              REPT(リピート)関数を使うと元の連番を残しつつ、別のセルにゼロで埋めた連番を表示させることができます。<br>
+              今回は出席番号の右隣に桁を揃えた連番を表示してみましょう。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_09.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              次の式を入力します。<br>
+              「=REPT("0",3-LEN(A2))&A2」
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_10.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              選択したセルの範囲の右下にマウスポインターを合わせるとマウスポインターが変わります。<br>
+              そのまま下にドラッグしていきます。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順４</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_11.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              数字部分が３桁で表示されるようになりました。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>補足１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_12.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              REPT(リピート)関数の解説をします。<br>
+              １つ目の引数に繰り返したい「文字列」、２つ目の引数に「繰り返し回数」を記入します。<br>
+              まず「文字列」は「0」です。<br>
+              次に「繰り返し回数」ですが「LEN(A2)」=「A2のセル内の文字数」となり「A2」には「3」が１文字入っているので「LEN(A2)=1」です。<br>
+              今回は３桁に揃えたいので「3」から「A2の文字数」分を引いた数「3-1」の「2」が繰り返し回数となり「3」の前に「0を2回繰り返す」という意味になります。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>補足２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_13.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              REPT(リピート)関数で生成された「繰り返し回数分」の「0」の文字列と「A2」のセル内の文字列を「&」で連結しています。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>蛇足</h2>
+        <ul class="list-style">
+          <li>ここから紹介する内容は基本的にオススメしません</li>
+          <li>数字が文字列として扱われますので、数式として利用する場合うまく機能しなくなります。</li>
+          <li>表示だけ変えたいという方のみ、読み進めてください。</li>
+        </ul>
+      </section>
+
+      <section>
+        <h3>蛇足１の１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_14.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              まずは、設定したい範囲を選択します。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>蛇足１の２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_15.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「ホーム」タブの「数値」と表示されているプルダウンメニューから「文字列」を選択します。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>蛇足１の３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_16.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              これで「001」と表示されます。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>蛇足２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_17.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              こちらは別の方法になりますが「'」(シングルクォーテーション)を入力してから「001」と入力すると文字列として扱われます。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>蛇足まとめ</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/excel/excel_003_18.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              上記のどちらの方法でも「文字列」として扱われてしまいます。<br>
+              そのため、左上に緑色のマークが表示されてしまいます。<br>
+              こちらは「エラーチェックオプション」と言い、エクセルからの注意喚起です。<br>
+              緑色のマークを非表示にする時は、表示されている「！」マークをクリックし「このエラーを無視する」をクリックする必要があります。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section class="back-to-category">
+        <div class="btn">
+          <a href="excel.html">
+            記事一覧に戻る
+          </a>
+        </div>
+      </section>
+
+    </div><!--container-->
+  </article><!--content-->
+
+  <section class="ad-sp">
+    <div class="container">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-sp.jpg" alt="" width="300" height="250">
+      </a>
+    </div>
+  </section>
+
+  <div class="side-menu">
+
+    <aside class="category">
+      <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+      <nav>
+        <ul>
+          <li><a href="html-css.html">html+css</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="php.html">PHP</a></li>
+          <li><a href="photoshop.html">PhotoShop</a></li>
+          <li><a href="illustrator.html">Illustrator</a></li>
+          <li><a href="excel.html">Excel</a></li>
+          <li><a href="others.html">Others</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <aside class="profile">
+      <h1><i class="bi bi-emoji-smile"></i>プロフィール</h1>
+      <img src="img/profile.png" alt="" width="100" height="100">
+      <h2>おさわりくん</h2>
+      <p>
+        独学でWebデザインの勉強をしている幼稚園児。年中さんのヒヨコ組です。勉強したことや、忘れがちなことをメモしてます。花まるをもらえるようにいつも頑張ってます！
+      </p>
+    </aside>
+
+    <aside class="ad-pc">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-pc.jpg" alt="">
+      </a>
+    </aside>
+
+  </div><!--side-menu-->
+
+</div><!--article-wrap-->
+
+<footer>
+  <div class="container">
+    <small>&copy;おさわりの覚書き</small>
+  </div>
+</footer>
+
+<a href="#" id="to-top"><i class="bi bi-arrow-up-square-fill"></i></a>
+
+<script src="js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="js/main.js"></script>
+</body>
+</html>

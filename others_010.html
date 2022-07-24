@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おさわりの覚書き</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/atom-one-dark.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="target"></div>
+
+<header>
+  <div class="container">
+    <a href="index.html">
+      <h1>
+        <img src="img/logo.png" alt="ロゴのイメージ" width="150" height="36">
+      </h1>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a id="open">
+            <i class="bi bi-list"></i>
+            メニュー
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="overlay">
+  <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="html-css.html">html+css</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="photoshop.html">PhotoShop</a></li>
+      <li><a href="illustrator.html">Illustrator</a></li>
+      <li><a href="excel.html">Excel</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="mask disable"></div>
+
+<div class="article-wrap">
+
+  
+  <article class="content img-content">
+    <div class="container">
+
+      <h1>
+        シンタックスハイライト「highlight.js」の設定と使い方
+      </h1>
+
+      <div class="post-date">
+        <span>
+          <i class="bi bi-clock"></i>
+          2022/06/26
+        </span>
+      </div>
+
+      <img src="img/others/others_010-hero.png" alt="記事のトップイメージ" class="article-top-img">
+
+      <section class="caption">
+        <h1><i class="bi bi-list-ul"></i>この記事の目次</h1>
+        <ul>
+          <li><a href="">highlight.jsとは？</a></li>
+          <li><a href="">highlight.jsのダウンロード</a></li>
+          <li><a href="">highlight.jsの導入方法</a></li>
+          <li><a href="">実際にソースコードをハイライトしてみよう</a></li>
+          <li><a href="">ハイライトを装飾してみよう</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>highlight.jsとは？</h2>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_01.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              プログラミングの勉強をしている時、このような表示をみたことはありませんか？<br>
+              「highlight.js」を使用するとプログラミングコードに色を付けて表示することができます。<br>
+              カラーデザインのテーマも豊富に用意されており、自分の好みの色を選択することができます。<br>
+              ちなみに「おさわりの覚書き」は「atom-one-dark」というテーマを使用しています。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>highlight.jsのダウンロード</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_02.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「highlight.js」を入手します。<br>
+              <a href="https://highlightjs.org/" target="_blank" class="outer-site-url"><i class="bi bi-box-arrow-up-right"></i>ダウンロードサイト</a><br>
+              「Get version ...」をクリックします。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_03.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              必要な言語にチェックを入れて「Download」をクリックします。<br>
+              ちなみに後から言語を追加したいなと思った時は、追加でチェックしてダウンロードしなおし、ファイルを更新すれば問題ありません。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_04.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              こちらのフォルダがダンロードされるので、ダブルクリックして、ファイルを開きます。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順４</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_05.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              必要なファイルは「hightlight.min.js」と「styles」にあるCSSファイルです。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順５</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_06.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              「styles」フォルダをクリックするとCSSフォルダが多数表示されますので、今回は「atom-one-dark.min.css」を保存します。<br>
+              これで準備は完了です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>補足</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_07.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              ▼こちらをクリックすると上記のサイトが開きます。<br>
+              <a href="https://highlightjs.org/static/demo/" target="_blank" class="outer-site-url"><i class="bi bi-box-arrow-up-right"></i>ダウンロードサイト</a><br>
+              デモページが用意されているので、好みのスタイルを探すことができます。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>highlight.jsの導入方法</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_08.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              bodyの閉じタグの直前に下記のスクリプトを埋め込みます。
+            </p>
+<pre><code class="one-sentence">&lt;script src="js/highlight.min.js"&gt;&lt;/script&gt;
+</code></pre>
+<pre><code class="one-sentence">&lt;script&gt;hljs.highlightAll();&lt;/script&gt;
+</code></pre>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_09.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              headerタグの中に下記のスクリプトを埋め込みます。<br>
+              後ほど自分で書き換えるためにも、自分のスタイルシートよりも上に埋め込むようにしましょう。
+            </p>
+<pre><code class="one-sentence">&lt;link rel="stylesheet" href="css/atom-one-dark.min.css"&gt;
+</code></pre>
+          <p>
+            これで導入完了です！
+          </p>
+          <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>実際にソースコードをハイライトしてみよう</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_10.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              実際にコードに「highlight.js」を適用させてみましょう。<br>
+              まずは、コードを<code class="code-tag">pre</code>と<code class="code-tag">code</code>で囲んでみましょう。
+              ただ、これでは正常に表示されません。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_11.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              <code class="code-tag">code</code>内に特定の文字列(例:&lt;)がある時は、文字実体参照(例:&amp;lt;)で記入する必要があります。<br>
+              また、<code class="code-tag">code</code>のクラス属性には言語名(例:html)を指定しましょう。<br>
+              <span class="note">※実際には指定しなくても自動で検知してくれるのですが、指定しておいた方が無難です。</span>
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順３</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_12.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              細かなことですが、実は上記のコードでは上部に余白ができてしまいます。<br>
+              これは先頭の改行がそのまま改行として認識されてしまうからです。<br>
+              後尾の改行は自動的に削られるようになっています。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順４</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_13.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              余白を削るためには、このように<code class="code-tag">code</code>の直後に改行を入れないような書き方をしましょう。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h2>ハイライトを装飾してみよう</h2>
+        <h3>手順１</h3>
+        <section class="sample">
+          <div class="pic">
+            <img src="img/others/others_010_01.png" alt="">
+          </div>
+          <div class="desc">
+            <p>
+              左上に言語の種類が表示されるようにCSSを追加してみましょう。
+            </p>
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section>
+        <h3>手順２</h3>
+        <section class="sample">
+          <div class="pic">
+<pre><code class="css">
+.hljs {
+  position: relative;
+}
+.hljs::before {
+  position: absolute;
+  top: 0;
+  left: 0;
+  content: '';
+  color: #fff;
+  font-weight: bold;
+  padding: 1px 7px;
+}
+.hljs.html::before {
+  content: 'HTML';
+  background-color: #0099ff;
+}
+.hljs.css::before {
+  content: 'CSS';
+  background-color: #f700ff;
+}
+.hljs.javascript::before {
+  content: 'JavaScript';
+  background-color: #ff8d00;
+}
+.hljs.php::before {
+  content: 'PHP';
+  background-color: #00ff9d;
+}
+.hljs.sql::before {
+  content: 'SQL';
+  background-color: #ff0037;
+}
+</code></pre>
+          </div>
+          <div class="desc">
+            <p>
+              <code class="code-tag">content</code>の内容や<code>background-color</code class="code-tag">を変更して自分好みのスタイルに変更してみましょう。<br>
+              なお、このスタイルを適用することで、<code class="code-tag">code</code>の直後に改行を入れて空白を作る必要がありますので、副次的にコード自体を少しスッキリできます。<br>
+              これで完成です！
+            </p>
+            <img src="img/finish.png" alt="" width="100" height="100" class="finish">
+          </div>
+        </section><!--sample-->
+      </section>
+
+      <section class="back-to-category">
+        <div class="btn">
+          <a href="others.html">
+            記事一覧に戻る
+          </a>
+        </div>
+      </section>
+
+    </div><!--container-->
+  </article><!--content-->
+
+  <section class="ad-sp">
+    <div class="container">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-sp.jpg" alt="" width="300" height="250">
+      </a>
+    </div>
+  </section>
+
+  <div class="side-menu">
+
+    <aside class="category">
+      <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+      <nav>
+        <ul>
+          <li><a href="html-css.html">html+css</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="php.html">PHP</a></li>
+          <li><a href="photoshop.html">PhotoShop</a></li>
+          <li><a href="illustrator.html">Illustrator</a></li>
+          <li><a href="excel.html">Excel</a></li>
+          <li><a href="others.html">Others</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <aside class="profile">
+      <h1><i class="bi bi-emoji-smile"></i>プロフィール</h1>
+      <img src="img/profile.png" alt="" width="100" height="100">
+      <h2>おさわりくん</h2>
+      <p>
+        独学でWebデザインの勉強をしている幼稚園児。年中さんのヒヨコ組です。勉強したことや、忘れがちなことをメモしてます。花まるをもらえるようにいつも頑張ってます！
+      </p>
+    </aside>
+
+    <aside class="ad-pc">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-pc.jpg" alt="">
+      </a>
+    </aside>
+
+  </div><!--side-menu-->
+
+</div><!--article-wrap-->
+
+<footer>
+  <div class="container">
+    <small>&copy;おさわりの覚書き</small>
+  </div>
+</footer>
+
+<a href="#" id="to-top"><i class="bi bi-arrow-up-square-fill"></i></a>
+
+<script src="js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="js/main.js"></script>
+</body>
+</html>

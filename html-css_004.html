@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>おさわりの覚書き</title>
+  <link rel="icon" href="img/favicon.png">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+  <link rel="stylesheet" href="css/atom-one-dark.min.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<div id="target"></div>
+
+<header>
+  <div class="container">    
+    <a href="index.html">
+      <h1>
+        <img src="img/logo.png" alt="ロゴのイメージ" width="150" height="36">
+      </h1>
+    </a>
+    <nav>
+      <ul>
+        <li>
+          <a id="open">
+            <i class="bi bi-list"></i>
+            メニュー
+          </a>
+        </li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<div class="overlay">
+  <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+  <nav>
+    <ul>
+      <li><a href="index.html">HOME</a></li>
+      <li><a href="html-css.html">html+css</a></li>
+      <li><a href="javascript.html">JavaScript</a></li>
+      <li><a href="php.html">PHP</a></li>
+      <li><a href="photoshop.html">PhotoShop</a></li>
+      <li><a href="illustrator.html">Illustrator</a></li>
+      <li><a href="excel.html">Excel</a></li>
+      <li><a href="others.html">Others</a></li>
+    </ul>
+  </nav>
+</div>
+
+<div class="mask disable"></div>
+
+<div class="article-wrap">
+
+  <article class="content">
+    <div class="container">
+
+      <h1>
+        CSSのクラス名でよく使う単語まとめ
+      </h1>
+
+      <div class="post-date">
+        <span>
+          <i class="bi bi-clock"></i>
+          2022/05/08
+        </span>
+      </div>
+
+      <img src="img/html-css/html-css_004-hero.png" alt="記事のトップイメージ" class="article-top-img">
+
+      <section class="caption">
+        <h1><i class="bi bi-list-ul"></i>この記事の目次</h1>
+        <ul>
+          <li><a href="">オススメの命令規則</a></li>
+          <li><a href="">コンテナ関連</a></li>
+          <li><a href="">レイアウト関連</a></li>
+          <li><a href="">パーツ関連</a></li>
+          <li><a href="">コンテンツ内容</a></li>
+          <li><a href="">見出し関連</a></li>
+          <li><a href="">画像・動画関連</a></li>
+          <li><a href="">フォーム関連</a></li>
+          <li><a href="">Javascript関連</a></li>
+          <li><a href="">その他</a></li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>オススメの命令規則</h2>
+        <ul class="list-style">
+          <li>
+            単語はハイフンで繋ぐ<br>
+            (例: header-color)
+          </li>
+          <li>
+            アンダースコアやキャメルケースは使わない<br>
+            (例: header_color、 HeaderColor)
+          </li>
+          <li>
+            できる限り省略形は使わないようにする<br>
+            × txt、ttl、cap → ○ text、title、caption
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>コンテナ関連</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>container</th>
+              <td>入れ物</td>
+            </tr>
+            <tr>
+              <th>wrapper</th>
+              <td>包むもの</td>
+            </tr>
+            <tr>
+              <th>top</th>
+              <td>トップ</td>
+            </tr>
+            <tr>
+              <th>home</th>
+              <td>ホーム、トップページ</td>
+            </tr>
+            <tr>
+              <th>head</th>
+              <td>頭</td>
+            </tr>
+            <tr>
+              <th>foot</th>
+              <td>足</td>
+            </tr>
+            <tr>
+              <th>section</th>
+              <td>セクション</td>
+            </tr>
+            <tr>
+              <th>article</th>
+              <td>記事</td>
+            </tr>
+            <tr>
+              <th>content</th>
+              <td>コンテンツ、文書の内容</td>
+            </tr>
+            <tr>
+              <th>group</th>
+              <td>グループ</td>
+            </tr>
+            <tr>
+              <th>area</th>
+              <td>領域</td>
+            </tr>
+            <tr>
+              <th>box</th>
+              <td>箱</td>
+            </tr>
+            <tr>
+              <th>item</th>
+              <td>アイテム、項目</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>レイアウト関連</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>layout</th>
+              <td>レイアウト</td>
+            </tr>
+            <tr>
+              <th>list</th>
+              <td>リスト、一覧</td>
+            </tr>
+            <tr>
+              <th>table</th>
+              <td>テーブル、表</td>
+            </tr>
+            <tr>
+              <th>row</th>
+              <td>列、横並び</td>
+            </tr>
+            <tr>
+              <th>column</th>
+              <td>行、縦並び</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>パーツ関連</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>logo</th>
+              <td>ロゴ</td>
+            </tr>
+            <tr>
+              <th>navigation、nav</th>
+              <td>ナビゲーション</td>
+            </tr>
+            <tr>
+              <th>menu</th>
+              <td>メニュー</td>
+            </tr>
+            <tr>
+              <th>tab</th>
+              <td>タブ</td>
+            </tr>
+            <tr>
+              <th>accordion</th>
+              <td>アコーディオン</td>
+            </tr>
+            <tr>
+              <th>button</th>
+              <td>ボタン</td>
+            </tr>
+            <tr>
+              <th>topicpath</th>
+              <td>パンくず</td>
+            </tr>
+            <tr>
+              <th>timeline</th>
+              <td>タイムライン、時系列に並べたリスト</td>
+            </tr>
+            <tr>
+              <th>date</th>
+              <td>日付</td>
+            </tr>
+            <tr>
+              <th>time</th>
+              <td>日時</td>
+            </tr>
+            <tr>
+              <th>advertising、ad</th>
+              <td>広告</td>
+            </tr>
+            <tr>
+              <th>banner</th>
+              <td>バナー</td>
+            </tr>
+            <tr>
+              <th>copyright</th>
+              <td>コピーライト</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>コンテンツ内容</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>news</th>
+              <td>ニュース</td>
+            </tr>
+            <tr>
+              <th>information、info</th>
+              <td>インフォメーション</td>
+            </tr>
+            <tr>
+              <th>event</th>
+              <td>行事、出来事</td>
+            </tr>
+            <tr>
+              <th>history</th>
+              <td>ヒストリー</td>
+            </tr>
+            <tr>
+              <th>concept</th>
+              <td>コンセプト、構想、概念</td>
+            </tr>
+            <tr>
+              <th>company</th>
+              <td>会社</td>
+            </tr>
+            <tr>
+              <th>shop</th>
+              <td>店舗</td>
+            </tr>
+            <tr>
+              <th>tel</th>
+              <td>電話</td>
+            </tr>
+            <tr>
+              <th>adress</th>
+              <td>住所</td>
+            </tr>
+            <tr>
+              <th>access</th>
+              <td>交通手段</td>
+            </tr>
+            <tr>
+              <th>cart</th>
+              <td>カート、購入するアイテムを一時的に保管する場所</td>
+            </tr>
+            <tr>
+              <th>payment</th>
+              <td>支払い</td>
+            </tr>
+            <tr>
+              <th>privacy</th>
+              <td>プライバシー</td>
+            </tr>
+            <tr>
+              <th>policy</th>
+              <td>ポリシー</td>
+            </tr>
+            <tr>
+              <th>contact</th>
+              <td>お問合せ</td>
+            </tr>
+            <tr>
+              <th>faq</th>
+              <td>よくある質問</td>
+            </tr>
+            <tr>
+              <th>index</th>
+              <td>インデックス、索引</td>
+            </tr>
+            <tr>
+              <th>sitemap</th>
+              <td>サイトマップ</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>見出し関連</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>title</th>
+              <td>見出し、タイトル</td>
+            </tr>
+            <tr>
+              <th>heading</th>
+              <td>見出し</td>
+            </tr>
+            <tr>
+              <th>caption</th>
+              <td>見出し</td>
+            </tr>
+            <tr>
+              <th>catch</th>
+              <td>キャッチ、興味を引く</td>
+            </tr>
+            <tr>
+              <th>table-of-contents、toc</th>
+              <td>目次</td>
+            </tr>
+            <tr>
+              <th>introduction、intro</th>
+              <td>前置き、導入</td>
+            </tr>
+            <tr>
+              <th>description、desc</th>
+              <td>説明、概要</td>
+            </tr>
+            <tr>
+              <th>features</th>
+              <td>特徴</td>
+            </tr>
+            <tr>
+              <th>detail</th>
+              <td>詳細、細部</td>
+            </tr>
+            <tr>
+              <th>summary</th>
+              <td>要約</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>画像・動画関連</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>image、img</th>
+              <td>画像</td>
+            </tr>
+            <tr>
+              <th>photo</th>
+              <td>写真</td>
+            </tr>
+            <tr>
+              <th>picture、pic</th>
+              <td>写真</td>
+            </tr>
+            <tr>
+              <th>hero</th>
+              <td>キービジュアルとなる大型の画像</td>
+            </tr>
+            <tr>
+              <th>carousel</th>
+              <td>画像をスライドさせて切り替えるインターフェイス</td>
+            </tr>
+            <tr>
+              <th>figure</th>
+              <td>図形</td>
+            </tr>
+            <tr>
+              <th>thumbnail</th>
+              <td>サムネイル</td>
+            </tr>
+            <tr>
+              <th>icon</th>
+              <td>アイコン</td>
+            </tr>
+            <tr>
+              <th>map</th>
+              <td>地図</td>
+            </tr>
+            <tr>
+              <th>video</th>
+              <td>ビデオ、映像、動画</td>
+            </tr>
+            <tr>
+              <th>movie</th>
+              <td>映像、動画</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>フォーム関連</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>post</th>
+              <td>ポスト、投稿</td>
+            </tr>
+            <tr>
+              <th>optional</th>
+              <td>任意</td>
+            </tr>
+            <tr>
+              <th>required</th>
+              <td>必須</td>
+            </tr>
+            <tr>
+              <th>caution</th>
+              <td>注意</td>
+            </tr>
+            <tr>
+              <th>warning</th>
+              <td>警告</td>
+            </tr>
+            <tr>
+              <th>label</th>
+              <td>ラベル、付箋</td>
+            </tr>
+            <tr>
+              <th>key</th>
+              <td>キー、符号</td>
+            </tr>
+            <tr>
+              <th>value</th>
+              <td>値</td>
+            </tr>
+            <tr>
+              <th>submit</th>
+              <td>送信</td>
+            </tr>
+            <tr>
+              <th>reset</th>
+              <td>リセット</td>
+            </tr>
+            <tr>
+              <th>search</th>
+              <td>検索する</td>
+            </tr>
+            <tr>
+              <th>confirm</th>
+              <td>確認する</td>
+            </tr>
+            <tr>
+              <th>complete</th>
+              <td>完了</td>
+            </tr>
+            <tr>
+              <th>finish</th>
+              <td>完了</td>
+            </tr>
+            <tr>
+              <th>entry</th>
+              <td>登録</td>
+            </tr>
+            <tr>
+              <th>register</th>
+              <td>登録</td>
+            </tr>
+            <tr>
+              <th>save</th>
+              <td>セーブ、保存</td>
+            </tr>
+            <tr>
+              <th>overwrite</th>
+              <td>上書き</td>
+            </tr>
+            <tr>
+              <th>draft</th>
+              <td>下書き</td>
+            </tr>
+            <tr>
+              <th>delete</th>
+              <td>削除</td>
+            </tr>
+            <tr>
+              <th>login</th>
+              <td>ログイン</td>
+            </tr>
+            <tr>
+              <th>logout</th>
+              <td>ログアウト</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>Javascript関連</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>show</th>
+              <td>見せる</td>
+            </tr>
+            <tr>
+              <th>appear</th>
+              <td>現れる</td>
+            </tr>
+            <tr>
+              <th>hide</th>
+              <td>隠す</td>
+            </tr>
+            <tr>
+              <th>hidden</th>
+              <td>隠された</td>
+            </tr>
+            <tr>
+              <th>current</th>
+              <td>現在の</td>
+            </tr>
+            <tr>
+              <th>active</th>
+              <td>アクティブ、活動中</td>
+            </tr>
+            <tr>
+              <th>selected</th>
+              <td>選ばれた</td>
+            </tr>
+            <tr>
+              <th>disabled</th>
+              <td>無効になっている</td>
+            </tr>
+            <tr>
+              <th>open</th>
+              <td>開く</td>
+            </tr>
+            <tr>
+              <th>close</th>
+              <td>閉じる</td>
+            </tr>
+            <tr>
+              <th>scrolled</th>
+              <td>スクロールした</td>
+            </tr>
+            <tr>
+              <th>mask</th>
+              <td>マスク、覆い隠す</td>
+            </tr>
+            <tr>
+              <th>overlay</th>
+              <td>オーバーレイ、かぶせる、上書きする</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section>
+        <h2>その他</h2>
+        <table>
+          <tbody>
+            <tr>
+              <th>main</th>
+              <td>メイン、主要な</td>
+            </tr>
+            <tr>
+              <th>primary</th>
+              <td>主要な、最初の</td>
+            </tr>
+            <tr>
+              <th>secondary</th>
+              <td>第二の</td>
+            </tr>
+            <tr>
+              <th>tertiary</th>
+              <td>第三の</td>
+            </tr>
+            <tr>
+              <th>small</th>
+              <td>小さい</td>
+            </tr>
+            <tr>
+              <th>midium</th>
+              <td>中間の</td>
+            </tr>
+            <tr>
+              <th>large</th>
+              <td>大きい</td>
+            </tr>
+            <tr>
+              <th>common</th>
+              <td>共通の</td>
+            </tr>
+            <tr>
+              <th>global</th>
+              <td>全体的な</td>
+            </tr>
+            <tr>
+              <th>local</th>
+              <td>局所的な</td>
+            </tr>
+            <tr>
+              <th>about</th>
+              <td>～について</td>
+            </tr>
+            <tr>
+              <th>related</th>
+              <td>関連のある</td>
+            </tr>
+            <tr>
+              <th>recommend</th>
+              <td>オススメ、推奨</td>
+            </tr>
+            <tr>
+              <th>more</th>
+              <td>もっと多くの</td>
+            </tr>
+            <tr>
+              <th>next</th>
+              <td>次の</td>
+            </tr>
+            <tr>
+              <th>previous、prev</th>
+              <td>前の</td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+
+      <section class="back-to-category">
+        <div class="btn">
+          <a href="html-css.html">
+            記事一覧に戻る
+          </a>
+        </div>
+      </section>
+
+    </div><!--container-->
+  </article><!--content-->
+
+  <section class="ad-sp">
+    <div class="container">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-sp.jpg" alt="" width="300" height="250">
+      </a>
+    </div>
+  </section>
+
+  <div class="side-menu">
+
+    <aside class="category">
+      <h1><i class="bi bi-pin-angle"></i>カテゴリー</h1>
+      <nav>
+        <ul>
+          <li><a href="html-css.html">html+css</a></li>
+          <li><a href="javascript.html">JavaScript</a></li>
+          <li><a href="php.html">PHP</a></li>
+          <li><a href="photoshop.html">PhotoShop</a></li>
+          <li><a href="illustrator.html">Illustrator</a></li>
+          <li><a href="excel.html">Excel</a></li>
+          <li><a href="others.html">Others</a></li>
+        </ul>
+      </nav>
+    </aside>
+
+    <aside class="profile">
+      <h1><i class="bi bi-emoji-smile"></i>プロフィール</h1>
+      <img src="img/profile.png" alt="" width="100" height="100">
+      <h2>おさわりくん</h2>
+      <p>
+        独学でWebデザインの勉強をしている幼稚園児。年中さんのヒヨコ組です。勉強したことや、忘れがちなことをメモしてます。花まるをもらえるようにいつも頑張ってます！
+      </p>
+    </aside>
+
+    <aside class="ad-pc">
+      <a href="https://h-p.tv/happyland/" target="_blank">
+        <img src="img/ad-pc.jpg" alt="">
+      </a>
+    </aside>
+
+  </div><!--side-menu-->
+
+</div><!--article-wrap-->
+
+<footer>
+  <div class="container">
+    <small>&copy;おさわりの覚書き</small>
+  </div>
+</footer>
+
+<a href="#" id="to-top"><i class="bi bi-arrow-up-square-fill"></i></a>
+
+<script src="js/highlight.min.js"></script>
+<script>hljs.highlightAll();</script>
+<script src="js/main.js"></script>
+</body>
+</html>
